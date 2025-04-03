@@ -35,34 +35,47 @@ const Login = () => {
   return (
     <div className="login">
       <form className="loginForm" onSubmit={loginHandler}>
-        <Typography variant="h3" style={{ padding: "2vmax" }}>
-          Social Aap
-        </Typography>
+        <span className="button" data-text="Socially">
+          <span className="actual-text">&nbsp;Socially&nbsp;</span>
+          <span aria-hidden="true" className="hover-text">
+            &nbsp;Socially&nbsp;
+          </span>
+        </span>
 
-        <input
-          type="email"
-          placeholder="Email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <div className="form-control" id="okok">
+          <input
+            className="input input-alt"
+            placeholder="Enter email ID"
+            required
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <span className="input-border input-border-alt"></span>
+        </div>
 
-        <input
-          type="password"
-          placeholder="Password"
-          required
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <div className="form-control">
+          <input
+            className="input input-alt"
+            placeholder="Enter password"
+            required
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <span className="input-border input-border-alt"></span>
+        </div>
 
-        <Link to="/forgot/password">
-          <Typography>Forgot Password?</Typography>
-        </Link>
+        {/* <Link to="/forgot/password">
+          <Typography color="gray">Forgot Password?</Typography>
+        </Link> */}
 
-        <Button type="submit">Login</Button>
+        <Button type="submit">
+          <p id="loginBtn">Login</p>
+        </Button>
 
         <Link to="/register">
-          <Typography>New User?</Typography>
+          <Typography color="gray">New User?</Typography>
         </Link>
       </form>
     </div>

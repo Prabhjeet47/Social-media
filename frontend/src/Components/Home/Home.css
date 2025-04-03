@@ -16,9 +16,11 @@
   box-sizing: border-box;
 }
 .homeright {
+  border-left: solid 10px #fdf3b8;
   padding: 2vmax;
   box-sizing: border-box;
   overflow-y: auto;
+  background-image: linear-gradient(to right, #cec1ff, #fdf2b7);
 }
 
 .homeUser {

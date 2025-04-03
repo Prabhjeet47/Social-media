@@ -85,17 +85,23 @@ const Account = () => {
           sx={{ height: "8vmax", width: "8vmax" }}
         />
 
-        <Typography variant="h5">{user.name}</Typography>
+        <span id="username">{user.name}</span>
 
         <div>
-          <button onClick={() => setFollowersToggle(!followersToggle)}>
+          <button
+            style={{ backgroundColor: "transparent" }}
+            onClick={() => setFollowersToggle(!followersToggle)}
+          >
             <Typography>Followers</Typography>
           </button>
           <Typography>{user.followers.length}</Typography>
         </div>
 
         <div>
-          <button onClick={() => setFollowingToggle(!followingToggle)}>
+          <button
+            style={{ backgroundColor: "transparent" }}
+            onClick={() => setFollowingToggle(!followingToggle)}
+          >
             <Typography>Following</Typography>
           </button>
           <Typography>{user.following.length}</Typography>
@@ -106,7 +112,7 @@ const Account = () => {
           <Typography>{user.posts.length}</Typography>
         </div>
 
-        <Button variant="contained" onClick={logoutHandler}>
+        <Button id="logout-button" onClick={logoutHandler}>
           Logout
         </Button>
 

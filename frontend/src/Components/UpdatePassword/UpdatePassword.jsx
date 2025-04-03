@@ -1,6 +1,6 @@
 import "./UpdatePassword.css";
 import React, { useEffect, useState } from "react";
-import { Typography, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { updatePassword } from "../../Actions/User";
 import { useAlert } from "react-alert";
@@ -34,27 +34,36 @@ const UpdatePassword = () => {
   return (
     <div className="updatePassword">
       <form className="updatePasswordForm" onSubmit={submitHandler}>
-        <Typography variant="h3" style={{ padding: "2vmax" }}>
-          Social Aap
-        </Typography>
+        <span className="button" data-text="Socially">
+          <span className="actual-text">&nbsp;Socially&nbsp;</span>
+          <span aria-hidden="true" className="hover-text">
+            &nbsp;Socially&nbsp;
+          </span>
+        </span>
 
-        <input
-          type="password"
-          placeholder="Old Password"
-          required
-          value={oldPassword}
-          className="updatePasswordInputs"
-          onChange={(e) => setOldPassword(e.target.value)}
-        />
+        <div className="form-control" id="okok">
+          <input
+            className="input input-alt "
+            placeholder="Old password"
+            required
+            type="password"
+            value={oldPassword}
+            onChange={(e) => setOldPassword(e.target.value)}
+          />
+          <span className="input-border input-border-alt"></span>
+        </div>
 
-        <input
-          type="password"
-          placeholder="New Password"
-          required
-          className="updatePasswordInputs"
-          value={newPassword}
-          onChange={(e) => setNewPassword(e.target.value)}
-        />
+        <div className="form-control" id="new">
+          <input
+            className="input input-alt "
+            placeholder="New password"
+            required
+            type="password"
+            value={newPassword}
+            onChange={(e) => setNewPassword(e.target.value)}
+          />
+          <span className="input-border input-border-alt"></span>
+        </div>
 
         <Button disabled={loading} type="submit">
           Change Password

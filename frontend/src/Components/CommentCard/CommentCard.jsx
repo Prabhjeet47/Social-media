@@ -35,6 +35,10 @@ const CommentCard = ({
         <img src={avatar} alt={name} />
         <Typography style={{ minWidth: "6vmax" }}>{name}</Typography>
       </Link>
+      <span>&nbsp;</span>
+      <span>&nbsp;</span>
+      <span>&nbsp;</span>
+      <span>&nbsp;</span>
       <Typography>{comment}</Typography>
 
       {isAccount ? (

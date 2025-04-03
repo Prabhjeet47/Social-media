@@ -383,7 +383,6 @@ exports.forgotPassword = async (req, res) => {
     }
 
     const resetPasswordToken = user.getResetPasswordToken();
-
     await user.save();
 
     const resetUrl = `${req.protocol}://${req.get(

@@ -1,4 +1,4 @@
-import { Avatar, Typography, Button } from "@mui/material";
+import { Avatar, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./UpdateProfile.css";
@@ -64,9 +64,7 @@ const UpdateProfile = () => {
   ) : (
     <div className="updateProfile">
       <form className="updateProfileForm" onSubmit={submitHandler}>
-        <Typography variant="h3" style={{ padding: "2vmax" }}>
-          Social Aap
-        </Typography>
+        <span id="username">Update profile</span>
 
         <Avatar
           src={avatarPrev}
@@ -76,23 +74,29 @@ const UpdateProfile = () => {
 
         <input type="file" accept="image/*" onChange={handleImageChange} />
 
-        <input
-          type="text"
-          value={name}
-          placeholder="Name"
-          className="updateProfileInputs"
-          required
-          onChange={(e) => setName(e.target.value)}
-        />
+        <div className="form-control" id="okok">
+          <input
+            className="input input-alt"
+            placeholder="Enter username"
+            required
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <span className="input-border input-border-alt"></span>
+        </div>
 
-        <input
-          type="email"
-          placeholder="Email"
-          className="updateProfileInputs"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <div className="form-control upem" id="okok">
+          <input
+            className="input input-alt"
+            placeholder="Enter email"
+            required
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <span className="input-border input-border-alt"></span>
+        </div>
 
         <Button disabled={updateLoading} type="submit">
           Update

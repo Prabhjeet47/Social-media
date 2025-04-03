@@ -173,17 +173,21 @@ const Post = ({
           <Typography variant="h4">Comments</Typography>
 
           <form className="commentForm" onSubmit={addCommentHandler}>
-            <input
-              type="text"
-              value={commentValue}
-              onChange={(e) => setCommentValue(e.target.value)}
-              placeholder="Comment Here..."
-              required
-            />
+            <div className="form-control">
+              <input
+                className="input input-alt"
+                placeholder="Add comment"
+                required
+                type="text"
+                value={commentValue}
+                onChange={(e) => setCommentValue(e.target.value)}
+              />
+              <span className="input-border input-border-alt"></span>
+            </div>
 
-            <Button type="submit" variant="contained">
+            <button className="addCommentBtn" type="submit" variant="contained">
               Add
-            </Button>
+            </button>
           </form>
 
           {comments.length > 0 ? (
@@ -213,17 +217,21 @@ const Post = ({
           <Typography variant="h4">Update Caption</Typography>
 
           <form className="commentForm" onSubmit={updateCaptionHandler}>
-            <input
-              type="text"
-              value={captionValue}
-              onChange={(e) => setCaptionValue(e.target.value)}
-              placeholder="Caption Here..."
-              required
-            />
+            <div className="form-control">
+              <input
+                className="input input-alt"
+                placeholder="Add caption"
+                required
+                type="text"
+                value={captionValue}
+                onChange={(e) => setCaptionValue(e.target.value)}
+              />
+              <span className="input-border input-border-alt"></span>
+            </div>
 
-            <Button type="submit" variant="contained">
+            <button className="addCommentBtn" type="submit" variant="contained">
               Update
-            </Button>
+            </button>
           </form>
         </div>
       </Dialog>

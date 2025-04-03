@@ -1,4 +1,4 @@
-import { Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllUsers } from "../../Actions/User";
@@ -19,17 +19,19 @@ const Search = () => {
   return (
     <div className="search">
       <form className="searchForm" onSubmit={submitHandler}>
-        <Typography variant="h3" style={{ padding: "2vmax" }}>
-          Social Aap
-        </Typography>
+        <span id="username">Search profile</span>
 
-        <input
-          type="text"
-          value={name}
-          placeholder="Name"
-          required
-          onChange={(e) => setName(e.target.value)}
-        />
+        <div className="form-control" id="okok">
+          <input
+            className="input input-alt"
+            placeholder="Enter username"
+            required
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <span className="input-border input-border-alt"></span>
+        </div>
 
         <Button disabled={loading} type="submit">
           Search

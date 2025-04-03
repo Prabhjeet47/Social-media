@@ -40,12 +40,16 @@ const Register = () => {
       dispatch({ type: "clearErrors" });
     }
   }, [dispatch, error, alert]);
+
   return (
     <div className="register">
       <form className="registerForm" onSubmit={submitHandler}>
-        <Typography variant="h3" style={{ padding: "2vmax" }}>
-          Social Aap
-        </Typography>
+        <span className="button" data-text="Socially">
+          <span className="actual-text">&nbsp;Socially&nbsp;</span>
+          <span aria-hidden="true" className="hover-text">
+            &nbsp;Socially&nbsp;
+          </span>
+        </span>
 
         <Avatar
           src={avatar}
@@ -55,32 +59,41 @@ const Register = () => {
 
         <input type="file" accept="image/*" onChange={handleImageChange} />
 
-        <input
-          type="text"
-          value={name}
-          placeholder="Name"
-          className="registerInputs"
-          required
-          onChange={(e) => setName(e.target.value)}
-        />
+        <div className="form-control">
+          <input
+            className="input input-alt"
+            placeholder="Enter name"
+            required
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <span className="input-border input-border-alt"></span>
+        </div>
 
-        <input
-          type="email"
-          placeholder="Email"
-          className="registerInputs"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <div className="form-control">
+          <input
+            className="input input-alt"
+            placeholder="Enter email Id"
+            required
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <span className="input-border input-border-alt"></span>
+        </div>
 
-        <input
-          type="password"
-          className="registerInputs"
-          placeholder="Password"
-          required
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <div className="form-control">
+          <input
+            className="input input-alt"
+            placeholder="Enter password"
+            required
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <span className="input-border input-border-alt"></span>
+        </div>
 
         <Link to="/">
           <Typography>Already Signed Up? Login Now</Typography>

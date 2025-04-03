@@ -1,4 +1,4 @@
-import { Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useAlert } from "react-alert";
 import { useDispatch, useSelector } from "react-redux";
@@ -47,16 +47,23 @@ const NewPost = () => {
   return (
     <div className="newPost">
       <form className="newPostForm" onSubmit={submitHandler}>
-        <Typography variant="h3">New Post</Typography>
+        <span id="username">New post</span>
 
         {image && <img src={image} alt="post" />}
         <input type="file" accept="image/*" onChange={handleImageChange} />
-        <input
-          type="text"
-          placeholder="Caption..."
-          value={caption}
-          onChange={(e) => setCaption(e.target.value)}
-        />
+
+        <div className="form-control" id="okok">
+          <input
+            className="input input-alt"
+            placeholder="Enter caption"
+            required
+            type="text"
+            value={caption}
+            onChange={(e) => setCaption(e.target.value)}
+          />
+          <span className="input-border input-border-alt"></span>
+        </div>
+
         <Button disabled={loading} type="submit">
           Post
         </Button>

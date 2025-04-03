@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useAlert } from "react-alert";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import "./UserProfile.css";
 import {
   followAndUnfollowUser,
   getUserPosts,
@@ -114,17 +115,23 @@ const UserProfile = () => {
               sx={{ height: "8vmax", width: "8vmax" }}
             />
 
-            <Typography variant="h5">{user.name}</Typography>
+            <span id="username">{user.name}</span>
 
             <div>
-              <button onClick={() => setFollowersToggle(!followersToggle)}>
+              <button
+                style={{ backgroundColor: "transparent" }}
+                onClick={() => setFollowersToggle(!followersToggle)}
+              >
                 <Typography>Followers</Typography>
               </button>
               <Typography>{user.followers.length}</Typography>
             </div>
 
             <div>
-              <button onClick={() => setFollowingToggle(!followingToggle)}>
+              <button
+                style={{ backgroundColor: "transparent" }}
+                onClick={() => setFollowingToggle(!followingToggle)}
+              >
                 <Typography>Following</Typography>
               </button>
               <Typography>{user.following.length}</Typography>

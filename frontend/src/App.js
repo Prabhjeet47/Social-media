@@ -16,6 +16,7 @@ import ResetPassword from "./Components/ResetPassword/ResetPassword";
 import UserProfile from "./Components/UserProfile/UserProfile";
 import Search from "./Components/Search/Search";
 import NotFound from "./Components/NotFound/NotFound";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -74,6 +75,8 @@ function App() {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+      <Footer />
     </Router>
   );
 }

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { resetPassword } from "../../Actions/User";
 import "./ResetPassword.css";
+
 const ResetPassword = () => {
   const [newPassword, setNewPassword] = useState("");
   const dispatch = useDispatch();
@@ -31,9 +32,12 @@ const ResetPassword = () => {
   return (
     <div className="resetPassword">
       <form className="resetPasswordForm" onSubmit={submitHandler}>
-        <Typography variant="h3" style={{ padding: "2vmax" }}>
-          Social Aap
-        </Typography>
+        <span className="button" data-text="Socially">
+          <span className="actual-text">&nbsp;Socially&nbsp;</span>
+          <span aria-hidden="true" className="hover-text">
+            &nbsp;Socially&nbsp;
+          </span>
+        </span>
 
         <input
           type="password"
