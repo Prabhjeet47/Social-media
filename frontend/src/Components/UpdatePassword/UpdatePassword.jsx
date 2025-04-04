@@ -34,12 +34,7 @@ const UpdatePassword = () => {
   return (
     <div className="updatePassword">
       <form className="updatePasswordForm" onSubmit={submitHandler}>
-        <span className="button" data-text="Socially">
-          <span className="actual-text">&nbsp;Socially&nbsp;</span>
-          <span aria-hidden="true" className="hover-text">
-            &nbsp;Socially&nbsp;
-          </span>
-        </span>
+        <span id="username">Update password</span>
 
         <div className="form-control" id="okok">
           <input

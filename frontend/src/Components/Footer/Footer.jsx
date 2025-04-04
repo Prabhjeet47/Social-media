@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>SOCIALLY Created by Prabhjeet Singh</p>
+        <p>GATHER TOGETHER Created by Prabhjeet Singh</p>
         <p>
           Contact: &nbsp;
           <a href="mailto:prabhsmanku@gmail.com">prabhsmanku@gmail.com</a>

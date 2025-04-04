@@ -35,12 +35,7 @@ const Login = () => {
   return (
     <div className="login">
       <form className="loginForm" onSubmit={loginHandler}>
-        <span className="button" data-text="Socially">
-          <span className="actual-text">&nbsp;Socially&nbsp;</span>
-          <span aria-hidden="true" className="hover-text">
-            &nbsp;Socially&nbsp;
-          </span>
-        </span>
+        <span id="username">Gather Together</span>
 
         <div className="form-control" id="okok">
           <input

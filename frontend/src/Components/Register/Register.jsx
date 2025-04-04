@@ -44,12 +44,7 @@ const Register = () => {
   return (
     <div className="register">
       <form className="registerForm" onSubmit={submitHandler}>
-        <span className="button" data-text="Socially">
-          <span className="actual-text">&nbsp;Socially&nbsp;</span>
-          <span aria-hidden="true" className="hover-text">
-            &nbsp;Socially&nbsp;
-          </span>
-        </span>
+        <span id="username">Gather Together</span>
 
         <Avatar
           src={avatar}
