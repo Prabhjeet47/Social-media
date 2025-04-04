@@ -80,10 +80,12 @@ const Account = () => {
         )}
       </div>
       <div className="accountright">
-        <Avatar
-          src={user.avatar.url}
-          sx={{ height: "8vmax", width: "8vmax" }}
-        />
+        {user && user.avatar && (
+          <Avatar
+            src={user.avatar.url}
+            sx={{ height: "8vmax", width: "8vmax" }}
+          />
+        )}
 
         <span id="username">{user.name}</span>
 
